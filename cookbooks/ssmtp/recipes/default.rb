@@ -11,16 +11,16 @@ if ['solo', 'app', 'app_master'].include?(node[:instance_role])
     action :delete
   end
 
-  directory "/data/ssmtp" do
+  directory "/data/config/ssmtp" do
     owner "root"
     group "root"
     mode "0755"
     action :create
-    not_if "test -d /data/ssmtp"
+    not_if "test -d /data/config/ssmtp"
   end
 
   link "/etc/ssmtp" do
-    to '/data/ssmtp'
+    to '/data/config/ssmtp'
   end
 
 end

@@ -26,7 +26,7 @@
 #require_recipe "eybackup_slave"
 
 #uncomment to run the ssmtp recipe
-#require_recipe "ssmtp"
+require_recipe "ssmtp"
 
 #uncomment to run the mongodb recipe
 # require_recipe "mongodb"
@@ -66,3 +66,6 @@
 
 #uncomment to include the mysql_replication_check recipe
 #require_recipe "mysql_replication_check"
+
+#uncomment to include the timezone recipe
+require_recipe "timezone"
