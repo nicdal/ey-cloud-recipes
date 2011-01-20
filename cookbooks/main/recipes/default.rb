@@ -68,4 +68,4 @@ require_recipe "ssmtp"
 #require_recipe "mysql_replication_check"
 
 #uncomment to include the timezone recipe
-require_recipe "timezone"
+#require_recipe "timezone"
