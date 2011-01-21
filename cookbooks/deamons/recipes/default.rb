@@ -11,7 +11,7 @@ if ['solo', 'app', 'app_master'].include?(node[:instance_role])
        command "rake deamons:start"
        cwd "/data/#{app_name}/current"
        action :run
-       only_if { "rake --tasks deamons:start" }
+       only_if "rake --tasks deamons:start | grep 'deamons:start'"
     end    
     
   end
