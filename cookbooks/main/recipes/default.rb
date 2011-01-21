@@ -69,3 +69,6 @@ require_recipe "ssmtp"
 
 #uncomment to include the timezone recipe
 require_recipe "timezone"
+
+#uncomment to include the deamons recipe
+require_recipe "deamons"
