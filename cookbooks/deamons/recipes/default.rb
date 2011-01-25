@@ -9,6 +9,7 @@ if ['solo', 'app', 'app_master'].include?(node[:instance_role])
 
     execute "Starting deamons for #{app_name}" do
        command "rake deamons:start"
+       user node[:owner_name]
        cwd "/data/#{app_name}/current"
        action :run
     end    
